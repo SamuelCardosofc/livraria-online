@@ -9,7 +9,7 @@ db = SQLAlchemy()
 csrf = CSRFProtect()
 migrate = Migrate()
 login = LoginManager()
-
+login.login_view = 'login'
 
 def create_app():
     app = Flask(__name__)
